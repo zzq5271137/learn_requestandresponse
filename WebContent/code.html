@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Code</title>
+
+<script type="text/javascript">
+    function change(obj) {
+		obj.src = "/learnrequestandresponse/CheckCodeServlet?time=" + new Date().getTime();
+	}    
+</script>
+
+</head>
+<body>
+    <form action="/learnrequestandresponse/registerservlet">
+        <img src="/learnrequestandresponse/CheckCodeServlet" onclick="change(this)">
+        <br>
+        <input type="text" placeholder="请输入验证码" name="code">
+        <br>
+        <input type="submit" value="提交">    
+    </form>
+</body>
+</html>
